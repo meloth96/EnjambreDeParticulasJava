@@ -1,7 +1,6 @@
 package Modeladoras;
 
 import java.util.ArrayList;
-import java.math.*;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
