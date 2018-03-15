@@ -124,8 +124,7 @@ public class Enjambre {
             p.setVelocidadY((int) ((velocidadInercial * p.getVelocidadY()) + (aceleracionMinima * random.nextFloat())
                     * (p.getMejorPosicionY() - p.getY()) + ((aceleracionMaxima * random.nextFloat())
                     * (lider.getY() - p.getY()))));
-            System.out.println("Velocidad X: " + p.getVelocidadX());
-            System.out.println("Velocidad Y: " + p.getVelocidadY());
+            System.out.println("Velocidad X: " + p.getVelocidadX()+" Velocidad Y: "+p.getVelocidadY());
         }
     }
 
@@ -133,8 +132,7 @@ public class Enjambre {
         velocidadInercial = ((INERCIA_MINIMA - INERCIA_MAXIMA) / (cantidadIteraciones - 1)) * (iteracionActual - 1) + INERCIA_MAXIMA;
         aceleracionMinima = ((ACELERACION_MINIMA - ACELERACION_MAXIMA) / cantidadIteraciones) * iteracionActual + ACELERACION_MAXIMA;
         aceleracionMaxima = ((ACELERACION_MAXIMA - ACELERACION_MINIMA) / cantidadIteraciones) * iteracionActual + ACELERACION_MINIMA;
-        System.out.println("C1: " + aceleracionMinima);
-        System.out.println("C2: " + aceleracionMaxima);
+        System.out.println("C1: " + aceleracionMinima+ " C2: "+aceleracionMaxima);
         System.out.println("Velocidad Inercial: " + velocidadInercial);
     }
 
