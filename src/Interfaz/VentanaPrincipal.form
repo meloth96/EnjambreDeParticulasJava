@@ -97,7 +97,6 @@
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="botonReiniciar" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -134,9 +133,7 @@
                   <Component id="botonCreacionEnjambre" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="botonOptimizar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="botonReiniciar" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace pref="63" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -220,9 +217,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Aleatoria"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="opcionVelocidadAleatoriaActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="etiquetaInerciaMinima">
           <Properties>
@@ -262,11 +256,6 @@
             <Property name="paintLabels" type="boolean" value="true"/>
             <Property name="paintTicks" type="boolean" value="true"/>
             <Property name="value" type="int" value="0"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="botonReiniciar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Reiniciar"/>
           </Properties>
         </Component>
       </SubComponents>
