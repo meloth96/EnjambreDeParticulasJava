@@ -60,7 +60,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         sliderInerciaMinima = new javax.swing.JSlider();
         etiquetaInerciaMaxima = new javax.swing.JLabel();
         sliderInerciaMaxima = new javax.swing.JSlider();
-        botonReiniciar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -121,11 +120,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         sliderAceleracionMaxima.setValue(0);
 
         opcionVelocidadAleatoria.setText("Aleatoria");
-        opcionVelocidadAleatoria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                opcionVelocidadAleatoriaActionPerformed(evt);
-            }
-        });
 
         etiquetaInerciaMinima.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         etiquetaInerciaMinima.setText("Inercia Minima de Particulas");
@@ -146,8 +140,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         sliderInerciaMaxima.setPaintLabels(true);
         sliderInerciaMaxima.setPaintTicks(true);
         sliderInerciaMaxima.setValue(0);
-
-        botonReiniciar.setText("Reiniciar");
 
         javax.swing.GroupLayout panelAjustesLayout = new javax.swing.GroupLayout(panelAjustes);
         panelAjustes.setLayout(panelAjustesLayout);
@@ -174,8 +166,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .addGroup(panelAjustesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(botonOptimizar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(botonCreacionEnjambre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(botonReiniciar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         panelAjustesLayout.setVerticalGroup(
@@ -209,9 +200,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(botonCreacionEnjambre)
                 .addGap(18, 18, 18)
                 .addComponent(botonOptimizar)
-                .addGap(18, 18, 18)
-                .addComponent(botonReiniciar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -250,7 +239,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCreacionEnjambreActionPerformed
 
     private void botonOptimizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOptimizarActionPerformed
-
         contadorIteraciones = 0;
         ActionListener action;
         action = new ActionListener() {
@@ -275,10 +263,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         timer.start();
     }//GEN-LAST:event_botonOptimizarActionPerformed
 
-    private void opcionVelocidadAleatoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionVelocidadAleatoriaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_opcionVelocidadAleatoriaActionPerformed
-
     private int mapearValores(int x, int in_min, int in_max, int out_min, int out_max) {
         return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
     }
@@ -291,12 +275,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         mitadAnchoTablero = panelBusqueda.getWidth() / 2;
         mitadAltoTablero = panelBusqueda.getHeight() / 2;
         for (int i = 0; i < particulas.size(); i++) {
-            //System.out.println("X: "+particulas.get(i).getX()+" Y: "+particulas.get(i).getY());
             g2.fillOval(getPosicionX(particulas.get(i).getX()),
                     getPosicionY(particulas.get(i).getY()),
                     TAMANIO_PARTICULA, TAMANIO_PARTICULA);
         }
-//        g2.fillOval(getPosicionX(-100), getPosicionY(100), TAMANIO_PARTICULA, TAMANIO_PARTICULA);
     }
 
     public int getPosicionX(int posicion) {
@@ -323,7 +305,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonCreacionEnjambre;
     private javax.swing.JButton botonOptimizar;
-    private javax.swing.JButton botonReiniciar;
     private javax.swing.JTextField campoTextoCantidadParticulas;
     private javax.swing.JLabel etiquetaAceleracionMaxima;
     private javax.swing.JLabel etiquetaAceleracionMinima;
