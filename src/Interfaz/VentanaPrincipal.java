@@ -243,14 +243,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         System.out.println(inerciaMinima = ((float)sliderInerciaMinima.getValue())/10);
         System.out.println(inerciaMaxima = ((float)sliderInerciaMaxima.getValue())/10);
         velocidadAleatoria = opcionVelocidadAleatoria.isSelected();
-//        cantidadParticulas = Integer.parseInt(campoTextoCantidadParticulas.getText());
-//        aceleracionMinima = (sliderAceleracionMinima.getValue())/10;
-//        aceleracionMaxima = (sliderAceleracionMaxima.getValue())/10;
-//        inerciaMinima = (sliderInerciaMinima.getValue())/10;
-//        inerciaMaxima = (sliderInerciaMaxima.getValue())/10;
         enjambre = new Enjambre(cantidadParticulas,aceleracionMinima,
                 aceleracionMaxima,inerciaMinima,inerciaMaxima,velocidadAleatoria);
-        //enjambre = new Enjambre(30,(float)0.5,(float)2.5,(float)0.4,(float)0.9,false);
         imprimirParticulas();
 
     }//GEN-LAST:event_botonCreacionEnjambreActionPerformed
